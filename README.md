@@ -43,8 +43,8 @@ v2 = `[-3, 0, 1]`
 ---
 ## 📂 Repository Structure
 ```
-📦 Data Structures and Procedural programming
- ┣ 📄 distinct_sum_algorithm.algo
+📦 Data Structures Project
+ ┣ 📄 sum_algorithm.algo
  ┣ 📄 dot_product_algorithm.algo
  ┣ 📄 README.md
 ```
