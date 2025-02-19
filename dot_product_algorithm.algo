@@ -1,0 +1,36 @@
+// Function to compute the dot product of two vectors
+FUNCTION dot_product(v1, v2, size)
+    DECLARE ps ← 0
+    FOR i ← 0 to size-1 DO
+        ps ← ps + (v1[i] * v2[i])
+    ENDFOR
+    RETURN ps
+END FUNCTION
+
+// Algorithm to check if two vectors are orthogonal
+ALGORITHM CheckOrthogonality(n)
+    FOR i ← 1 to n DO
+        PRINT "Enter size of vectors:"
+        READ size
+        DECLARE v1[size], v2[size]
+
+        PRINT "Enter elements of vector v1:"
+        FOR j ← 0 to size-1 DO
+            READ v1[j]
+        ENDFOR
+
+        PRINT "Enter elements of vector v2:"
+        FOR j ← 0 to size-1 DO
+            READ v2[j]
+        ENDFOR
+
+        // Call dot_product function
+        DECLARE result ← dot_product(v1, v2, size)
+
+        IF result = 0 THEN
+            PRINT "Vectors are orthogonal"
+        ELSE
+            PRINT "Vectors are NOT orthogonal"
+        ENDIF
+    ENDFOR
+END ALGORITHM

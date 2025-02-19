@@ -1,0 +1,23 @@
+ALGORITHM SumOfDistinctElements(Set1, Set2)
+    DECLARE sum ← 0
+    DECLARE DistinctElements as an empty array
+
+    // Add elements from Set1 that are not in Set2
+    FOR each element in Set1 DO
+        IF element NOT IN Set2 THEN
+            sum ← sum + element
+            APPEND element to DistinctElements
+        ENDIF
+    ENDFOR
+
+    // Add elements from Set2 that are not in Set1
+    FOR each element in Set2 DO
+        IF element NOT IN Set1 THEN
+            sum ← sum + element
+            APPEND element to DistinctElements
+        ENDIF
+    ENDFOR
+
+    PRINT "Distinct Elements: ", DistinctElements
+    PRINT "Sum of Distinct Elements: ", sum
+END ALGORITHM
